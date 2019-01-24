@@ -1,0 +1,52 @@
+<html lang="en">
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:700' rel='stylesheet' type='text/css'>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>
+        Search User
+    </title>
+  </head>
+  <body>
+<nav>
+<div class="nav-wrapper">
+      <a href="index.php" class="brand-logo">Triple One Technologies</a>
+</div>
+</nav>
+<form action="searchuser.php" method="post">
+<div class="row">
+  <div class="input-field col s6">
+    <select id="search_by" name="search_by">
+      <option value="" disabled selected>Search by</option>
+      <option value="name">Name</option>
+      <option value="email">Email</option>
+      <option value="phone_number">Phone Number</option>
+    </select>
+    <label for="search_by">User Search</label>
+</div>
+   <div class="row">
+        <div class="input-field col s5">
+          <input id="search_term" name="search_term" type="text" class="validate">
+          <label for="search_term">Search Term</label>
+      </div>
+  </div>
+  </div>
+  <div class="row">
+        <div class="center">
+      <button class="btn waves-effect waves-light" type="submit" name="Search">Search User
+        <i class="material-icons right">send</i>
+      </button>
+      </div>
+      </div>
+</form>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    $(document).ready(function() {
+    $('select').formSelect();
+  }); 
+</script>
+</body>
+</html>
